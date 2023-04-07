@@ -1,0 +1,15 @@
+<section class={{styles.about}}>
+  <aside class={{styles.aside}}>
+    <button class={{styles.aside-button}} />
+  </aside>
+  <img src={{avatar}} class={{styles.avatar}} alt="Аватар" />
+  <form class={{styles.form}}>
+    {{#each inputs}}
+    <div class={{../styles.info-block}}>
+      <p class={{../styles.text}}>{{{this.text}}}</p>
+      <input value={{this.value}} class={{../styles.input}}>
+    </div>
+    {{/each}}
+    {{{submitButton}}}
+  </form>
+</section>

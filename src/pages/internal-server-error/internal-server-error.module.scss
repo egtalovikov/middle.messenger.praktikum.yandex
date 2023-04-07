@@ -1,0 +1,32 @@
+.internal-server-error {
+    color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    padding-top: 280px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 0 69px;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 11px;
+    color: #3369F3;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+}
