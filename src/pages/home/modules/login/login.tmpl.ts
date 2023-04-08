@@ -1,7 +1,7 @@
 import * as styles from "./login.module.scss";
 import tmpl from "./login.hbs";
-import button from "../../../../components/button/index.js";
-import input from "../../../../components/input/index.js";
+import button from "../../../../components/button/index.ts";
+import input from "../../../../components/input/index.ts";
 
 export const login = () => {
   const context = {

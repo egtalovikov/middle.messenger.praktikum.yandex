@@ -1,7 +1,7 @@
 import * as styles from "./edit-profile.module.scss";
 import tmpl from "./edit-profile.hbs";
 import avatar from "../../../../../static/profile-avatar.png";
-import button from "../../../../components/button/index.js";
+import button from "../../../../components/button/index.ts";
 
 export const editProfile = () => {
   const context = {

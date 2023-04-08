@@ -1,7 +1,7 @@
 import * as styles from "./change-password.module.scss";
 import tmpl from "./change-password.hbs";
 import avatar from "../../../../../static/profile-avatar.png";
-import button from "../../../../components/button/index.js";
+import button from "../../../../components/button/index.ts";
 
 export const changePassword = () => {
   const context = {

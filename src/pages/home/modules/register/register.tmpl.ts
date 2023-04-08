@@ -1,7 +1,7 @@
 import * as styles from "./register.module.scss";
 import tmpl from "./register.hbs";
-import button from "../../../../components/button/index.js";
-import input from "../../../../components/input/index.js";
+import button from "../../../../components/button/index.ts";
+import input from "../../../../components/input/index.ts";
 
 export const register = () => {
   const context = {
