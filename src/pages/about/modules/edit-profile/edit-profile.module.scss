@@ -19,6 +19,13 @@ $accent-color: #3369F3;
     position: absolute;
     left: 0px;
     border-right: 1px solid $border-color;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.aside:hover {
+  opacity: 0.7;
 }
 
 .aside-button {
