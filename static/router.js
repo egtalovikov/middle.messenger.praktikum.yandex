@@ -1,4 +1,3 @@
-import main from "../src/layout/main";
 import chats from "../src/modules/chats";
 import about from "../src/pages/about";
 import changePassword from "../src/pages/about/modules/change-password";
@@ -14,39 +13,39 @@ const root = document.getElementById("root");
 const routes = [
   {
     path: '/',
-    data: main(home)
+    data: home()
   },
   {
     path: '/signin',
-    data: main(login)
+    data: login()
   },
   {
     path: '/signup',
-    data: main(register)
+    data: register()
   },
   {
     path: '/chats',
-    data: main(chats)
+    data: chats()
   },
   {
     path: '/about',
-    data: main(about)
+    data: about()
   },
   {
     path: '/edit-profile',
-    data: main(editProfile)
+    data: editProfile()
   },
   {
     path: '/change-password',
-    data: main(changePassword)
+    data: changePassword()
   },
   {
     path: '/not-found',
-    data: main(notFound)
+    data: notFound()
   },
   {
     path: '/internal-server-error',
-    data: main(internalServerError)
+    data: internalServerError()
   },
  ];
 

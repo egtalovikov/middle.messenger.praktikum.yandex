@@ -1,12 +1,12 @@
 {
   "name": "middle.messenger.praktikum.yandex",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Messenger",
   "scripts": {
-    "dev": "parcel --port 3000 index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel --port 3000 src/index.html --open --no-cache --target default --dist-dir ./build",
+    "build": "parcel build src/index.html --no-source-maps --target default --dist-dir ./build",
+    "watch": "parcel watch"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -20,5 +20,6 @@
   },
   "engines": {
     "node": ">12"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
