@@ -14,12 +14,13 @@
     "parcel": "^2.8.3"
   },
   "dependencies": {
+    "@parcel/transformer-css": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "handlebars": "^4.7.7",
     "parcel-transformer-hbs": "^1.0.4"
   },
   "engines": {
-    "node": ">18.0.0"
+    "node": ">12.0.0"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
