@@ -1,0 +1,148 @@
+.home {
+  display: flex;
+}
+
+.chats-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-basis: 24%;
+  background-color: #FBFBFB;
+  box-sizing: border-box;
+  padding-top: 21px;
+  height: 100vh;
+}
+
+.chats {
+  overflow-y: auto;
+  width: 100%;
+}
+
+.button {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  width: 66px;
+  height: 12px;
+  color: #999999;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.button-arrow {
+  background-image: url('../../../static/profile-arrow.svg');
+  width: 8px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.form {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 14px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  border: none;
+  min-height: 32px;
+  text-indent: 20px;
+}
+
+.input::placeholder {
+  color: #999999;
+  text-align: center;
+  font-weight: 500;
+}
+
+.input:placeholder-shown {
+  background-image: url('../../../static/search-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+}
+
+.input:not(:placeholder-shown) {
+  background-image: none;
+}
+
+.chat {
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #EAEAEA;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 12px;
+}
+
+.avatar {
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  color: #1E1E1E;
+  margin: 0 0 4px;
+}
+
+.message {
+  color: #999999;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.time-and-count {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  margin: 0 0 14px;
+  color: #999999;
+}
+
+.count {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  color: #FFFFFF;
+  background-color: #3369F3;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 12px;
+}

@@ -1,0 +1,37 @@
+.messageBlock {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 11px;
+  max-width: 380px;
+  background-color: #F8F8F8;
+  margin-bottom: 10px;
+  border-radius: 0 15px 15px 15px;
+  max-height: 211px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.messageBlockOwner {
+  margin-left: auto;
+  background-color: #E4EDFD;
+  border-radius: 15px 15px 0 15px;
+}
+
+.message {
+  margin: 0 15px 0 0;
+}
+
+.time {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  color: #999999;
+  margin: 0;
+  text-align: right;
+}
+
+.timeOwner {
+  color: #3369F3;
+}
