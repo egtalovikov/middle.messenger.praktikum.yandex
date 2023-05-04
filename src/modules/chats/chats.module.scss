@@ -87,6 +87,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .input {
@@ -111,4 +112,14 @@
   border-radius: 50%;
   width: 28px;
   height: 28px;
+}
+
+.error { 
+  display: none;
+  color: red;
+  position: absolute;
+  font-size: 9px;
+  top: -30%;
+  max-width: 200px;
+  left: 0;
 }

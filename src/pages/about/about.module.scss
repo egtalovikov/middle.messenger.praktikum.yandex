@@ -1,5 +1,5 @@
-$border-color: #eaeaea;
-$accent-color: #3369f3;
+$borderColor: #eaeaea;
+$accentColor: #3369f3;
 
 .about {
   font-weight: 500;
@@ -18,7 +18,7 @@ $accent-color: #3369f3;
   background-color: #fbfbfb;
   position: absolute;
   left: 0px;
-  border-right: 1px solid $border-color;
+  border-right: 1px solid $borderColor;
   opacity: 1;
   transition: opacity 0.3s ease;
   cursor: pointer;
@@ -36,7 +36,7 @@ $accent-color: #3369f3;
   background-repeat: no-repeat;
   background-size: 11px 10px;
   background-position: center;
-  background-color: $accent-color;
+  background-color: $accentColor;
   border: none;
 }
 
@@ -96,7 +96,7 @@ $accent-color: #3369f3;
   display: flex;
   width: 510px;
   justify-content: space-between;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $borderColor;
 }
 
 .info-block:last-of-type {
@@ -118,10 +118,10 @@ $accent-color: #3369f3;
 }
 
 .link {
-  color: $accent-color;
+  color: $accentColor;
   text-decoration: none;
   width: 510px;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $borderColor;
   padding-bottom: 10px;
   margin-bottom: 10px;
   opacity: 1;

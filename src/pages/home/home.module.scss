@@ -2,6 +2,13 @@
   display: flex;
 }
 
+.link-button {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
 .chats-menu {
   display: flex;
   justify-content: flex-start;
@@ -20,7 +27,6 @@
 }
 
 .button {
-  align-self: flex-end;
   border: none;
   background-color: transparent;
   width: 66px;

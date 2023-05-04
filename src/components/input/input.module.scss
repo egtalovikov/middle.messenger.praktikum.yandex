@@ -35,3 +35,13 @@ input:focus {
   top: -14px;
   font-size: 9px;
 }
+
+.error { 
+  display: none;
+  color: red;
+  position: absolute;
+  font-size: 9px;
+  bottom: 0;
+  max-width: 200px;
+  right: -75%;
+}
