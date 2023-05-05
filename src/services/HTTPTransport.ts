@@ -1,4 +1,4 @@
-enum METHOD {
+enum METHODS {
     GET = 'GET',
     POST = 'POST',
     PUT = 'PUT',
@@ -7,7 +7,7 @@ enum METHOD {
 };
 
 type Options = {
-    method: METHOD;
+    method: METHODS;
     data?: any;
     headers?: any;
 };
@@ -25,23 +25,23 @@ function queryStringify(data: {[key: string]: string}) {
     }, '?');
   }
 
+type HTTPMethod = (url: string, options?: OptionsWithoutMethod) => Promise<XMLHttpRequest>
+
 class HTTPTransport {
-    get(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-        return this.request(url, { ...options, method: METHOD.GET });
-    };
+    get: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.GET})
+      )
+      put: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.PUT})
+      )
+      post: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.POST})
+      )
+      delete: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.DELETE})
+      )
 
-    post(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-        return this.request(url, { ...options, method: METHOD.POST });
-    };
-
-    put(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-        return this.request(url, { ...options, method: METHOD.PUT });
-    };
-    delete(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-        return this.request(url, { ...options, method: METHOD.DELETE });
-    };
-
-    request(url: string, options: Options = { method: METHOD.GET }): Promise<XMLHttpRequest> {
+    request(url: string, options: Options = { method: METHODS.GET }): Promise<XMLHttpRequest> {
         const { headers = {}, method, data } = options;
 
         return new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ class HTTPTransport {
         }
 
             const xhr = new XMLHttpRequest();
-            const isGet = method === METHOD.GET;
+            const isGet = method === METHODS.GET;
 
             xhr.open(
                 method, 

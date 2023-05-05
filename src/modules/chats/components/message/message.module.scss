@@ -1,10 +1,15 @@
+$messageBackgroundColor: #F8F8F8;
+$messageOwnerBackgroundColor: #E4EDFD;
+$timeColor: #999999;
+$timeOwnerColor: #3369F3;
+
 .messageBlock {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   padding: 11px;
   max-width: 380px;
-  background-color: #F8F8F8;
+  background-color: $messageBackgroundColor;
   margin-bottom: 10px;
   border-radius: 0 15px 15px 15px;
   max-height: 211px;
@@ -15,7 +20,7 @@
 
 .messageBlockOwner {
   margin-left: auto;
-  background-color: #E4EDFD;
+  background-color: $messageOwnerBackgroundColor;
   border-radius: 15px 15px 0 15px;
 }
 
@@ -27,11 +32,11 @@
   font-weight: 500;
   font-size: 9px;
   line-height: 9px;
-  color: #999999;
+  color: $timeColor;
   margin: 0;
   text-align: right;
 }
 
 .timeOwner {
-  color: #3369F3;
+  color: $timeOwnerColor;
 }

@@ -1,9 +1,12 @@
-$border-color: #EAEAEA;
-$accent-color: #3369F3;
+$borderColor: #EAEAEA;
+$accentColor: #3369F3;
+$textColor: #1E1E1E;
+$asideBackgroundColor: #FBFBFB;
+$inputTextColor: #999999;
 
 .about {
     font-weight: 500;
-    color: #1E1E1E;
+    color: $textColor;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,10 +18,10 @@ $accent-color: #3369F3;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FBFBFB;
+    background-color: $asideBackgroundColor;
     position: absolute;
     left: 0px;
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $borderColor;
     opacity: 1;
     transition: opacity 0.3s ease;
     cursor: pointer;
@@ -36,7 +39,7 @@ $accent-color: #3369F3;
     background-repeat: no-repeat;
     background-size: 11px 10px;
     background-position: center;
-    background-color: $accent-color;
+    background-color: $accentColor;
     border: none;
 }
 
@@ -54,7 +57,7 @@ $accent-color: #3369F3;
     display: flex;
     width: 510px;
     justify-content: space-between;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $borderColor;
     position: relative;
 }
 
@@ -65,7 +68,7 @@ $accent-color: #3369F3;
 
 .input {
     text-align: right;
-    color: #999999;
+    color: $inputTextColor;
     border: none;
     background-color: transparent;
 }

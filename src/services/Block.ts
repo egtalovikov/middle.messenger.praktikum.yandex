@@ -86,7 +86,7 @@ export default class Block {
         })
     }
 
-    private removeEvents() {
+    protected removeEvents() {
         const { events = {} } = this._props;
 
         Object.keys(events).forEach((eventName) => {

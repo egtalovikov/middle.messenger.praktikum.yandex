@@ -1,8 +1,10 @@
+$buttonColor: #3369F3;
+
 .button {
     font-weight: 500;
     font-size: 13px;
     line-height: 13px;
-    background-color: #3369F3;
+    background-color: $buttonColor;
     border-radius: 8px;
     border: none;
     color: #FFFFFF;

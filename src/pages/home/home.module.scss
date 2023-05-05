@@ -1,3 +1,11 @@
+$chatsMenuBackgroundColor: #FBFBFB;
+$grey: #999999;
+$inputBackgroundColor: #EFEFEF;
+$chatBorderColor: #EAEAEA;
+$nameColor: #1E1E1E;
+$countTextColor: #FFFFFF;
+$countBackgroundColor: #3369F3;
+
 .home {
   display: flex;
 }
@@ -15,7 +23,7 @@
   align-items: flex-start;
   flex-direction: column;
   flex-basis: 24%;
-  background-color: #FBFBFB;
+  background-color: $chatsMenuBackgroundColor;
   box-sizing: border-box;
   padding-top: 21px;
   height: 100vh;
@@ -31,7 +39,7 @@
   background-color: transparent;
   width: 66px;
   height: 12px;
-  color: #999999;
+  color: $grey;
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
@@ -61,7 +69,7 @@
 .input {
   box-sizing: border-box;
   width: 100%;
-  background-color: #EFEFEF;
+  background-color: $inputBackgroundColor;
   border-radius: 5px;
   border: none;
   min-height: 32px;
@@ -69,7 +77,7 @@
 }
 
 .input::placeholder {
-  color: #999999;
+  color: $grey;
   text-align: center;
   font-weight: 500;
 }
@@ -87,7 +95,7 @@
 .chat {
   padding: 0 10px;
   box-sizing: border-box;
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid $chatBorderColor;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -112,12 +120,12 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
-  color: #1E1E1E;
+  color: $nameColor;
   margin: 0 0 4px;
 }
 
 .message {
-  color: #999999;
+  color: $grey;
   font-size: 12px;
   line-height: 15px;
   margin: 0;
@@ -134,15 +142,15 @@
   font-size: 9px;
   line-height: 13px;
   margin: 0 0 14px;
-  color: #999999;
+  color: $grey;
 }
 
 .count {
   font-weight: 500;
   font-size: 11px;
   line-height: 12px;
-  color: #FFFFFF;
-  background-color: #3369F3;
+  color: $countTextColor;
+  background-color: $countBackgroundColor;
   text-align: center;
   width: 20px;
   height: 20px;

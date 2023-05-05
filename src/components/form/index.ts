@@ -107,6 +107,14 @@ export default class Form extends Block {
         super.addEvents();
     }
 
+    removeEvents() {
+        this._element.querySelectorAll('input').forEach(input => {
+            input.removeEventListener('focus', (e) => this._props.events?.validate(e))
+            input.removeEventListener('blur', (e) => this._props.events?.validate(e));
+        })
+        super.removeEvents();
+    }
+
     render() {
         return this.compile(tpl);
     }
