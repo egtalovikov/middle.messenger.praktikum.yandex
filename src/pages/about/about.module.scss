@@ -1,9 +1,15 @@
-$border-color: #eaeaea;
-$accent-color: #3369f3;
+$borderColor: #eaeaea;
+$accentColor: #3369f3;
+$textColor: #1e1e1e;
+$asideBackgroundColor: #fbfbfb;
+$changeAvatarBackgroundColor: #000000;
+$changeAvatarTextColor: #FFFFFF;
+$inputTextColor: #999999;
+$signoutColor: #ff0000;
 
 .about {
   font-weight: 500;
-  color: #1e1e1e;
+  color: $textColor;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -15,10 +21,10 @@ $accent-color: #3369f3;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fbfbfb;
+  background-color: $asideBackgroundColor;
   position: absolute;
   left: 0px;
-  border-right: 1px solid $border-color;
+  border-right: 1px solid $borderColor;
   opacity: 1;
   transition: opacity 0.3s ease;
   cursor: pointer;
@@ -36,7 +42,7 @@ $accent-color: #3369f3;
   background-repeat: no-repeat;
   background-size: 11px 10px;
   background-position: center;
-  background-color: $accent-color;
+  background-color: $accentColor;
   border: none;
 }
 
@@ -61,8 +67,8 @@ $accent-color: #3369f3;
   font-weight: 500;
   font-size: 13px;
   line-height: 14px;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: $changeAvatarBackgroundColor;
+  color: $changeAvatarTextColor;
   cursor: pointer;
   transition: opacity 0.3s ease;
   white-space: pre-line;
@@ -87,7 +93,7 @@ $accent-color: #3369f3;
 .name {
   font-weight: 600;
   font-size: 16px;
-  color: #1e1e1e;
+  color: $textColor;
   line-height: 16px;
   margin: 0 0 60px;
 }
@@ -96,7 +102,7 @@ $accent-color: #3369f3;
   display: flex;
   width: 510px;
   justify-content: space-between;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $borderColor;
 }
 
 .info-block:last-of-type {
@@ -106,7 +112,7 @@ $accent-color: #3369f3;
 
 .input {
   text-align: right;
-  color: #999999;
+  color: $inputTextColor;
   border: none;
   background-color: transparent;
 }
@@ -118,10 +124,10 @@ $accent-color: #3369f3;
 }
 
 .link {
-  color: $accent-color;
+  color: $accentColor;
   text-decoration: none;
   width: 510px;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $borderColor;
   padding-bottom: 10px;
   margin-bottom: 10px;
   opacity: 1;
@@ -133,7 +139,7 @@ $accent-color: #3369f3;
 }
 
 .signout {
-  color: #ff0000;
+  color: $signoutColor;
   text-decoration: none;
   width: 510px;
   padding-bottom: 10px;

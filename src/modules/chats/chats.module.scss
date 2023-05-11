@@ -1,0 +1,131 @@
+$borderColor: #EAEAEA;
+$nameColor: #1E1E1E;
+$sendButtonColor: #3369F3;
+$dateColor: #999999;
+$inputColor: #EFEFEF;
+
+.wrapper {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 48px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: $nameColor;
+  margin: 0;
+}
+
+.menu {
+  background-image: url("../../../static/chats-more-button.svg");
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.date {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: $dateColor;
+  margin-bottom: 30px;
+}
+
+.messages {
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 11px;
+  border-top: 1px solid $borderColor;
+}
+
+.attachButton {
+  background-color: transparent;
+  background-image: url('../../../static/chats-attach-button.svg');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  border: none;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.input {
+  background: $inputColor;
+  border-radius: 30px;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.sendButton {
+  border: none;
+  background-color: $sendButtonColor;
+  background-image: url('../../../static/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+.error { 
+  display: none;
+  color: red;
+  position: absolute;
+  font-size: 9px;
+  top: -30%;
+  max-width: 200px;
+  left: 0;
+}

@@ -1,3 +1,6 @@
+$borderColor: #3369F3;
+$inputColor: #999999;
+
 .container {
   position: relative;
   margin-bottom: 32px;
@@ -13,12 +16,12 @@
   width: 100%;
   display: block;
   border: none;
-  border-bottom: 1px solid #3369F3;
+  border-bottom: 1px solid $borderColor;
 }
 
 .container label {
   position: absolute;
-  color: #999999;
+  color: $inputColor;
   font-size: 13px;
   font-weight: 500;
   pointer-events: none;
@@ -34,4 +37,14 @@ input:focus {
 .container input:valid ~ label{
   top: -14px;
   font-size: 9px;
+}
+
+.error { 
+  display: none;
+  color: red;
+  position: absolute;
+  font-size: 9px;
+  bottom: 0;
+  max-width: 200px;
+  right: -75%;
 }

@@ -1,5 +1,8 @@
+$textColor: #1E1E1E;
+$linkColor: #3369F3;
+
 .internal-server-error {
-    color: #1E1E1E;
+    color: $textColor;
     display: flex;
     flex-direction: column;
     padding-top: 280px;
@@ -25,7 +28,7 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 11px;
-    color: #3369F3;
+    color: $linkColor;
     text-align: center;
     text-decoration: none;
     margin: 0 auto;

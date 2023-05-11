@@ -1,10 +1,13 @@
 @import url('../static/normalize.scss');
 @import url('../static/fonts/fonts.scss');
 
+$black : #000000;
+$white: #ffffff;
+
 body {
   font-family: 'Inter', arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $white;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -13,9 +16,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-#root {
+.content {
   min-width: 320px;
-  max-width: 1280px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

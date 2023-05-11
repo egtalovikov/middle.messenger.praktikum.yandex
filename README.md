@@ -3,22 +3,25 @@
 [Pull Request (1 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/2)
 
 <p align="center">
-    <img alt="Version 0.0.1" src="https://img.shields.io/badge/version-0.0.1-blue" />
+    <img alt="Version 0.1.0" src="https://img.shields.io/badge/version-0.1.0-blue" />
     <img alt="Quality" src="https://img.shields.io/badge/status-development-orange.svg" >
     <img alt="Made by: egtalovikov" src="https://img.shields.io/badge/made%20by-egtalovikov-blue" />
 </p>
 
 ## Описание
 
-На данный момент в проект на стадии вёрстки. Свёрстаны страницы: авторизация и регистрация, профиль, изменение профиля, изменение пароля.
+На данный момент проект на стадии разработки. Внедрён TypeScript.
 
 ## Стек
 
+* TypeScript
 * HTML
 * SCSS
 * JavaScript
 * Handlebars
 * Parcel
+* ESLint
+* Stylelint
 * Netlify
 
 ## Технологии
