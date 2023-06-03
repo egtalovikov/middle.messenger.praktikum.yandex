@@ -50,7 +50,7 @@ $signoutColor: #ff0000;
   width: 130px;
   height: 130px;
   position: relative;
-  margin: 60px 0 21px;
+  margin: 60px 0 37px;
 }
 
 .change-avatar {
@@ -149,4 +149,25 @@ $signoutColor: #ff0000;
 
 .signout:hover {
     opacity: 0.6;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupOpened {
+  visibility: visible;
+  opacity: 1;
 }

@@ -1,0 +1,86 @@
+$grey: #999999;
+$chatBorderColor: #EAEAEA;
+$nameColor: #1E1E1E;
+$countTextColor: #FFFFFF;
+$countBackgroundColor: #3369F3;
+$chatActiveColor: #E4EDFD;
+
+.chats {
+    overflow-y: auto;
+    width: 100%;
+}
+
+.chat {
+    padding: 0 10px 10px;
+    box-sizing: border-box;
+    border-top: 1px solid $chatBorderColor;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.chatActive {
+    background-color: $chatActiveColor;
+}
+
+.avatar {
+    width: 47px;
+    height: 47px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    color: $nameColor;
+    margin: 0 0 4px;
+}
+
+.message {
+    color: $grey;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+}
+
+.time-and-count {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    margin: 0 0 14px;
+    color: $grey;
+}
+
+.count {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 12px;
+    color: $countTextColor;
+    background-color: $countBackgroundColor;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 12px;
+}

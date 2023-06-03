@@ -1,13 +1,25 @@
 $chatsMenuBackgroundColor: #FBFBFB;
 $grey: #999999;
 $inputBackgroundColor: #EFEFEF;
-$chatBorderColor: #EAEAEA;
-$nameColor: #1E1E1E;
-$countTextColor: #FFFFFF;
-$countBackgroundColor: #3369F3;
+$addButtonColor: #3369F3;
 
 .home {
   display: flex;
+}
+
+.blank {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $grey;
 }
 
 .link-button {
@@ -29,9 +41,16 @@ $countBackgroundColor: #3369F3;
   height: 100vh;
 }
 
-.chats {
-  overflow-y: auto;
-  width: 100%;
+.addButton {
+  border: none;
+  background-color: transparent;
+  color: $addButtonColor;
+  font-weight: 900;
+  font-size: 30px;
+  height: 12px;
+  padding: 0 0 0 10px;
+  margin: 0;
+  cursor: pointer;
 }
 
 .button {
@@ -92,71 +111,23 @@ $countBackgroundColor: #3369F3;
   background-image: none;
 }
 
-.chat {
-  padding: 0 10px;
-  box-sizing: border-box;
-  border-top: 1px solid $chatBorderColor;
+.popup {
+  position: fixed;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 12px;
-}
-
-.avatar {
-  width: 47px;
-  height: 47px;
-  margin-right: 10px;
-}
-
-.info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.name {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 13px;
-  color: $nameColor;
-  margin: 0 0 4px;
-}
-
-.message {
-  color: $grey;
-  font-size: 12px;
-  line-height: 15px;
-  margin: 0;
-}
-
-.time-and-count {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.time {
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 13px;
-  margin: 0 0 14px;
-  color: $grey;
-}
-
-.count {
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 12px;
-  color: $countTextColor;
-  background-color: $countBackgroundColor;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 12px;
+}
+
+.popupOpened {
+  visibility: visible;
+  opacity: 1;
 }
