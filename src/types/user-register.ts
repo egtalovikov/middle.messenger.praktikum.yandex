@@ -7,4 +7,3 @@ interface RegisterFormModel {
     confirm_password: string;
     phone: string;
   }
-  
