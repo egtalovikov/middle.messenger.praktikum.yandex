@@ -75,4 +75,3 @@ export default class About extends Block {
 Handlebars.registerHelper('isnull', function (value) {
     return value !== null;
   });
-  
