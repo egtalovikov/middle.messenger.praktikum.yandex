@@ -3,9 +3,10 @@ import tpl from "./tpl";
 import styles from "./chatsList.module.scss";
 import avatar from "../../../../../static/mock-avatar.svg";
 import { router } from "../../../..";
+import Handlebars from "handlebars";
 
 export default class ChatsList extends Block {
-  constructor(chat) {
+  constructor(chat: any) {
     super('ul', {
       styles,
       attr: {
@@ -14,9 +15,7 @@ export default class ChatsList extends Block {
       avatar,
       chat,
       events: {
-        click: (e) => {
-          this._element.querySelectorAll(`.${styles.chat}`).forEach(x => x.classList.remove(styles.chatActive))
-          e.target.closest('li').classList.add(styles.chatActive)
+        click: (e: { target: { closest: (arg0: string) => { (): any; new(): any; getAttribute: { (arg0: string): any; new(): any; }; }; }; }) => {
           router.go(`/messenger/${e.target.closest('li').getAttribute('data-chat-id')}`);
         }
       }
@@ -24,13 +23,14 @@ export default class ChatsList extends Block {
   }
 
   render() {
-    this._props.chats?.map(x => {
-      if (this._props.chat?.id === x.id) {
-        console.log(this._props.chat?.id)
-        console.log(x.id)
-        x['chatActive'] = 'active';
-      }
-    })
     return this.compile(tpl);
   }
 }
+
+Handlebars.registerHelper("deleteFirstAndLast", function(str) {
+  return str.replace(/^.|.$/g,"");
+});
+
+Handlebars.registerHelper("getTime", function(time) {
+  return `${new Date(time).getHours()}:${new Date(time).getMinutes()}`;
+});

@@ -25,7 +25,7 @@ export default class Block {
     protected _props: Props;
     protected _children: Children;
     private _id: string;
-    protected _element: HTMLElement;
+    protected _element!: HTMLElement;
     private _meta: { tag: string; props: Props };
     private _eventBus: EventBus;
 

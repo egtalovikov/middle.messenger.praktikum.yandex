@@ -14,7 +14,7 @@ const form = new Form({ formClassName: styles.form, inputs, submitButton, enctyp
 
 
 export default class changeAvatarPopup extends Block {
-  constructor(popupStyle, popupOpenedStyle) {
+  constructor(popupStyle: any, popupOpenedStyle: string) {
     super('div', {
       styles,
       attr: {
@@ -22,7 +22,7 @@ export default class changeAvatarPopup extends Block {
       },
       form,
       events: {
-        click: (e) => {
+        click: (e: { target: { classList: { contains: (arg0: any) => any; }; }; }) => {
                 if (e.target.classList.contains(popupStyle) || e.target.classList.contains(styles.closeButton)) {
                   document.querySelector(`.${popupStyle}`)?.classList.remove(popupOpenedStyle);
                 }

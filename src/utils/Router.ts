@@ -3,10 +3,10 @@ import Route from "./Route";
 
 export default class Router {
     static __instance: Router;
-    routes: Array<Route>;
-    history: History;
-    _currentRoute: Route | null;
-    rootQuery: string;
+    routes!: Array<Route>;
+    history!: History;
+    _currentRoute!: Route | null;
+    rootQuery!: string;
 
 
     constructor(rootQuery: string) {

@@ -11,10 +11,8 @@ import Router from './utils/Router';
 import Store from './services/Store';
 import UserGetInfoController from './controllers/user-get-info';
 import GetChatsController from './controllers/get-chats';
-import Chats from './modules/chats';
-import ChatsList from './pages/home/components/chatsList';
-
-window.AppStore = Store;
+import GetChatTokenController from './controllers/get-chat-token';
+import { setMessages, setSocket } from './services/Store/Actions';
 
 const UserGetInfo = new UserGetInfoController();
 
@@ -22,20 +20,29 @@ const GetChats = new GetChatsController();
 
 export const router = new Router(".app");
 
-function getCookie(name) {
-	let matches = document.cookie.match(new RegExp(
-		"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-	));
-	return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-
 UserGetInfo.getInfo()
 GetChats.getChats();
-Store.getState().chats.forEach(chat => {
+Store.getState().chats?.forEach((chat: { id: string | number; }) => {
 	router.use(`/messenger/${chat.id}`, Index, 'main', {
 		content: new Home(chat)
 	})
+	new GetChatTokenController().getChatToken(chat.id)
+		.then(token => {
+			const socket = new WebSocket(`wss://ya-praktikum.tech/ws/chats/${Store.getState().user.id}/${chat.id}/${token}`);
+			socket.addEventListener('open', () => {
+				socket.send(JSON.stringify({
+					content: '0',
+					type: 'get old',
+				}))
+			})
+			socket.addEventListener('message', event => {
+				setMessages(chat.id, JSON.parse(event.data));
+				setSocket(chat.id, socket);
+			})
+		})
+		.catch(err => console.log(err))
 })
+
 router.use('/settings', Index, 'main', {
 	content: new About(),
 })
@@ -61,3 +68,4 @@ router.use('/settings', Index, 'main', {
 		content: new InternalServerError(),
 	})
 	.start();
+	

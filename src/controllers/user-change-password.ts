@@ -4,7 +4,7 @@ import prepareDataToRequest from "../utils/prepareDataToRequest";
 const changePasswordApi = new changePasswordAPI();
 
 export default class UserChangePasswordController {
-    public async changePassword(data) {
+    public async changePassword(data: UpdatePasswordFormModel) {
         try {
             await changePasswordApi.update(prepareDataToRequest(data));
         } catch (error) {

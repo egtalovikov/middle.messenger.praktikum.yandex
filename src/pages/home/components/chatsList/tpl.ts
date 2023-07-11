@@ -5,10 +5,10 @@ const tpl = `
   <div class={{../styles.info}}>
     <div class={{../styles.name-and-message}}>
       <p class={{../styles.name}}>{{this.title}}</p>
-      <p class={{../styles.message}}>{{this.last_message}}</p>
+      <p class={{../styles.message}}>{{deleteFirstAndLast this.last_message.content}}</p>
     </div>
     <div class={{../styles.time-and-count}}>
-      <p class={{../styles.time}}>{{this.time}}</p>
+      <p class={{../styles.time}}>{{getTime this.last_message.time}}</p>
       {{#if this.unread_count includeZero=true}}{{else}}<p class={{../styles.count}}>{{this.unread_count}}</p>{{/if}}
     </div>
   </div>

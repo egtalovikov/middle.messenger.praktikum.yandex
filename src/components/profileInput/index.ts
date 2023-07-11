@@ -4,14 +4,12 @@ import Block from "../../services/Block";
 import Handlebars from "handlebars";
 
 interface Props {
-    name: string,
-    type: string,
-    text: string,
-    errorText: string
+    inputs: [],
+    disabled: Boolean
 }
 
 export default class profileInput extends Block {
-    constructor({ inputs, disabled }) {
+    constructor({ inputs, disabled } : Props) {
         super('div', {
             styles,
             inputs,
@@ -86,6 +84,7 @@ export default class profileInput extends Block {
     }
 }
 
-Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+Handlebars.registerHelper('ifEquals', function(this: any, arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   });
+  

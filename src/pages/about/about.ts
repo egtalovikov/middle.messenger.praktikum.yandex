@@ -59,6 +59,7 @@ export default class About extends Block {
             e.stopPropagation();
             if (e.target === this._element.querySelector("#logout")) {
               new UserLogoutController().logout();
+              localStorage.clear();
             }
             if (e.target === this._element.querySelector(`.${styles["change-avatar"]}`)) {
               this._element.querySelector(`.${styles.popup}`)?.classList.add(styles.popupOpened);
@@ -74,3 +75,4 @@ export default class About extends Block {
 Handlebars.registerHelper('isnull', function (value) {
     return value !== null;
   });
+  

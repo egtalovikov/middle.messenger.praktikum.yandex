@@ -4,7 +4,7 @@ import { Actions } from "../services/Store";
 const changeAvatarApi = new changeAvatarAPI();
 
 export default class UserChangeAvatarController {
-    public async changeAvatar(data) {
+    public async changeAvatar(data: FormData) {
         try {
             const { avatar } = await changeAvatarApi.update(data);
             Actions.setAvatar(avatar);

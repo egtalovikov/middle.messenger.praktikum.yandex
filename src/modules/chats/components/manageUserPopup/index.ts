@@ -15,7 +15,7 @@ const form = new Form({ formClassName: styles.form, inputs, submitButton })
 
 
 export default class manageUserPopup extends Block {
-  constructor(popupStyle, popupOpenedStyle, chat, title, buttonText) {
+  constructor(popupStyle: any, popupOpenedStyle: any, chat: any, title: string, buttonText: string) {
     super('div', {
       styles,
       attr: {
@@ -32,19 +32,19 @@ export default class manageUserPopup extends Block {
   }
 
   protected addEvents(): void {
-    document.querySelector(`.${this._props.popupStyle}`)?.addEventListener('click', (e) => {
-      if (e.target.classList.contains(this._props.popupStyle) || e.target.classList.contains(styles.closeButton)) {
+    document.querySelector(`.${this._props.popupStyle}`)?.addEventListener('click', (e : any) => {
+      if (e.target?.classList.contains(this._props.popupStyle) || e.target?.classList.contains(styles.closeButton)) {
         document.querySelector(`.${this._props.popupStyle}`)?.classList.remove(this._props.popupOpenedStyle);
       }
     })
-    this._element.querySelector('form').addEventListener('submit', (e) => {
+    this._element.querySelector('form')?.addEventListener('submit', (e : any) => {
       e.preventDefault();
       e.stopPropagation();
       if (this._props.buttonText === 'Добавить') {
-        new ManageUserController().addUser({ users: [Number(e.target.elements[0].value)], chatId: this._props.chat.id });
+        new ManageUserController().addUser({ users: [Number(e.target?.elements[0].value)], chatId: this._props.chat.id });
       }
       if (this._props.buttonText === 'Удалить') {
-        new ManageUserController().deleteUser({ users: [Number(e.target.elements[0].value)], chatId: this._props.chat.id });
+        new ManageUserController().deleteUser({ users: [Number(e.target?.elements[0].value)], chatId: this._props.chat.id });
       }
     })
   }

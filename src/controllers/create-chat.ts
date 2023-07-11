@@ -5,7 +5,7 @@ import GetChatsController from "./get-chats";
 const homeApi = new HomeAPI();
 
 export default class CreateChatController {
-    public async createChat(data) {
+    public async createChat(data: { [key: string]: string; }) {
         try {
             await homeApi.create(prepareDataToRequest(data));
             await new GetChatsController().getChats();

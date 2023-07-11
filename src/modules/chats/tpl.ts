@@ -11,14 +11,17 @@ const tpl = `
     <button type="button" class={{styles.openMenuButton}}></button>
   </div>
   <ul class={{styles.messages}}>
-    <p class={{styles.date}}>{{date}}</p>
     {{#each messages}}
     {{{this}}}
     {{/each}}
   </ul>
   <div class={{styles.footer}}>
     <button class={{styles.attachButton}}></button>
-    {{{form}}}
+    <form class={{styles.form}}>
+      <input class={{styles.input}} name="message" placeholder="Сообщение" />
+      <span class={{styles.error}}>Сообщение не должно быть пустым</span>
+      {{{submitButton}}}
+    </form>
   </div>
   {{{addUserPopupComponent}}}
   {{{deleteUserPopupComponent}}}

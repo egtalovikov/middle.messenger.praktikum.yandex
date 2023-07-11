@@ -5,7 +5,7 @@ import Nav from "../../components/nav";
 const NavElement = new Nav().getContent().outerHTML;
 
 export default class Index extends Block {
-    constructor(tag, props = {}) {
+    constructor(tag: string | undefined, props = {}) {
         super(tag, props);
     }
     render() {

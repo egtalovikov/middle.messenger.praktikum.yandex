@@ -9,7 +9,7 @@ import addChatPopup from "./components/addChatPopup";
 const popup = new addChatPopup(styles.popup, styles.popupOpened);
 
 export default class Home extends Block {
-  constructor(chat) {
+  constructor(chat: any) {
     super('section', {
       Chats: new Chats(chat),
       styles,
@@ -21,7 +21,7 @@ export default class Home extends Block {
       chatsList: new ChatsList(chat),
       popup,
       events: {
-        click: (e) => {
+        click: (e: { stopPropagation: () => void; target: Element | null; }) => {
           e.stopPropagation();
           if (e.target === this._element.querySelector(`.${styles["addButton"]}`)) {
             this._element.querySelector(`.${styles.popup}`)?.classList.add(styles.popupOpened);

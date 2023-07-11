@@ -13,7 +13,7 @@ export default class HomeAPI extends BaseAPI {
             .then((res) => JSON.parse(res.response));
     }
 
-    public create(data) {
+    public create(data: string) {
         return homeAPIInstance.post('https://ya-praktikum.tech/api/v2/chats', {
             headers: {
                 'Content-type': "application/json"
