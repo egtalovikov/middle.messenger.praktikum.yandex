@@ -68,4 +68,3 @@ router.use('/settings', Index, 'main', {
 		content: new InternalServerError(),
 	})
 	.start();
-	
