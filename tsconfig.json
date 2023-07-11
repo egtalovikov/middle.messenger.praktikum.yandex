@@ -13,6 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "strictNullChecks": true,
     "strict": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
