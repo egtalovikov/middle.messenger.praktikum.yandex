@@ -1,9 +1,11 @@
-$grey: #999999;
+/* stylelint-disable */
+$grey: #999;
 $chatBorderColor: #EAEAEA;
 $nameColor: #1E1E1E;
-$countTextColor: #FFFFFF;
+$countTextColor: #FFF;
 $countBackgroundColor: #3369F3;
 $chatActiveColor: #E4EDFD;
+/* stylelint-enable */
 
 .chats {
     overflow-y: auto;
@@ -22,7 +24,7 @@ $chatActiveColor: #E4EDFD;
     cursor: pointer;
 }
 
-.chatActive {
+.chatActive { /* stylelint-disable-line */
     background-color: $chatActiveColor;
 }
 

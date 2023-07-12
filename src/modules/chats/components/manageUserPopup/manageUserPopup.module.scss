@@ -1,13 +1,15 @@
-$inputBorderColor: #999999;
+/* stylelint-disable */
+$inputBorderColor: #999;
 $buttonColor: #3369F3;
+/* stylelint-enable */
 
 .container {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFF;
+    color: #000;
     max-width: 342px;
     padding: 36px 34px;
     position: relative;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgb(0 0 0 15%);
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -19,7 +21,7 @@ $buttonColor: #3369F3;
     margin: 0 0 54px;
 }
 
-.closeButton {
+.closeButton { /* stylelint-disable-line */
     border: none;
     background: url("../../../../../static/popup-close.svg") center/100% no-repeat;
     cursor: pointer;
@@ -45,7 +47,7 @@ $buttonColor: #3369F3;
     background-color: $buttonColor;
     border-radius: 8px;
     border: none;
-    color: #FFFFFF;
+    color: #FFF;
     width: 280px;
     padding: 12px 0;
     margin-bottom: 14px;

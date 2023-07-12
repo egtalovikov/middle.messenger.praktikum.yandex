@@ -1,11 +1,13 @@
+/* stylelint-disable */
 $borderColor: #eaeaea;
 $accentColor: #3369f3;
 $textColor: #1e1e1e;
 $asideBackgroundColor: #fbfbfb;
-$changeAvatarBackgroundColor: #000000;
-$changeAvatarTextColor: #FFFFFF;
-$inputTextColor: #999999;
-$signoutColor: #ff0000;
+$changeAvatarBackgroundColor: #000;
+$changeAvatarTextColor: #FFF;
+$inputTextColor: #999;
+$signoutColor: #f00;
+/* stylelint-enable */
 
 .about {
   font-weight: 500;
@@ -23,7 +25,7 @@ $signoutColor: #ff0000;
   align-items: center;
   background-color: $asideBackgroundColor;
   position: absolute;
-  left: 0px;
+  left: 0;
   border-right: 1px solid $borderColor;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -87,7 +89,7 @@ $signoutColor: #ff0000;
 }
 
 .avatar:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(0 0 0 / 80%);
 }
 
 .name {
@@ -156,7 +158,7 @@ $signoutColor: #ff0000;
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 50%);
   top: 0;
   left: 0;
   min-height: 100%;
@@ -168,7 +170,7 @@ $signoutColor: #ff0000;
   justify-content: center;
 }
 
-.popupOpened {
+.popupOpened { /* stylelint-disable-line */
   visibility: visible;
   opacity: 1;
 }

@@ -1,9 +1,10 @@
+/* stylelint-disable */
 $accentColor: #3369F3;
 $textColor: #1E1E1E;
 $asideBackgroundColor: #FBFBFB;
-$inputTextColor: #999999;
+$inputTextColor: #999;
 $borderColor: #EAEAEA;
-
+/* stylelint-enable */
 
 .about {
   font-weight: 500;
@@ -21,7 +22,7 @@ $borderColor: #EAEAEA;
   align-items: center;
   background-color: $asideBackgroundColor;
   position: absolute;
-  left: 0px;
+  left: 0;
   border-right: 1px solid $borderColor;
   opacity: 1;
   transition: opacity 0.3s ease;

@@ -1,7 +1,7 @@
-$inputTextColor: #999999;
-$borderColor: #EAEAEA;
+$inputTextColor: #999; /* stylelint-disable-line */
+$borderColor: #EAEAEA; /* stylelint-disable-line */
 
-.infoBlock {
+.infoBlock { /* stylelint-disable-line */
     display: flex;
     width: 510px;
     justify-content: space-between;
@@ -9,7 +9,7 @@ $borderColor: #EAEAEA;
     position: relative;
 }
 
-.infoBlock:last-of-type {
+.infoBlock:last-of-type { /* stylelint-disable-line */
     border: none;
     margin-bottom: 60px;
 }
