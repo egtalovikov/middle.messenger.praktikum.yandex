@@ -1,16 +1,16 @@
 const tpl = `
   <ul>
     <li>
-      <a href="/">Чаты</a>
+      <a href="/messenger">Чаты</a>
     </li>
     <li>
-      <a href="/signin">Вход</a>
+      <a href="/">Вход</a>
     </li>
     <li>
-      <a href="/signup">Регистрация</a>
+      <a href="/sign-up">Регистрация</a>
     </li>
     <li>
-      <a href="/about">Профиль</a>
+      <a href="/settings">Профиль</a>
     </li>
     <li>
       <a href="/edit-profile">Изменить данные</a>

@@ -1,9 +1,11 @@
+/* stylelint-disable */
 $messageBackgroundColor: #F8F8F8;
 $messageOwnerBackgroundColor: #E4EDFD;
-$timeColor: #999999;
+$timeColor: #999;
 $timeOwnerColor: #3369F3;
+/* stylelint-enable */
 
-.messageBlock {
+.messageBlock { /* stylelint-disable-line */
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -11,17 +13,17 @@ $timeOwnerColor: #3369F3;
   max-width: 380px;
   background-color: $messageBackgroundColor;
   margin-bottom: 10px;
-  border-radius: 0 15px 15px 15px;
+  border-radius: 0 15px 15px;
   max-height: 211px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-.messageBlockOwner {
+.messageBlockOwner { /* stylelint-disable-line */
   margin-left: auto;
   background-color: $messageOwnerBackgroundColor;
-  border-radius: 15px 15px 0 15px;
+  border-radius: 15px 15px 0;
 }
 
 .message {
@@ -37,6 +39,6 @@ $timeOwnerColor: #3369F3;
   text-align: right;
 }
 
-.timeOwner {
+.timeOwner { /* stylelint-disable-line */
   color: $timeOwnerColor;
 }

@@ -10,6 +10,7 @@ export default class Button extends Block {
             attr: {
                 class: styles.button,
                 "aria-label": text,
+                id: "submitButton"
             }
         })
     }

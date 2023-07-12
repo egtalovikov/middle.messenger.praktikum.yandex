@@ -1,6 +1,6 @@
-import Index from "../layout/index";
+import Block from "../services/Block";
 
-export default function render(query: string, component: Index) {
+export default function render(query: string, component: Block) {
 
 	const root = document.querySelector(query);
 

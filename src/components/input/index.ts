@@ -27,7 +27,7 @@ export default class Input extends Block {
     }
 }
 
-Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+Handlebars.registerHelper('ifCond', function(this : any, v1, v2, options) {
     if(v1 === v2) {
       return options.fn(this);
     }

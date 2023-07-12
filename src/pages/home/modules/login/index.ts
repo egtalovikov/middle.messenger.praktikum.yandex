@@ -12,7 +12,7 @@ const inputs = [
 
 const submitButton = new Button("Войти");
 
-const form  = new Form({ formClassName: styles.form, inputs, submitButton });
+const form = new Form({ formClassName: styles.form, inputs, submitButton });
 
 export default class Login extends Block {
   constructor() {
@@ -24,7 +24,7 @@ export default class Login extends Block {
       return this.compile(tpl, {
         styles,
         title: "Вход",
-        registerLink: "/signup",
+        registerLink: "/sign-up",
         registerLinkText: "Нет аккаунта?",
         form: this._children.form
       });

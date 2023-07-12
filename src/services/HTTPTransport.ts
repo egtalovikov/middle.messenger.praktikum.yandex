@@ -27,7 +27,7 @@ function queryStringify(data: {[key: string]: string}) {
 
 type HTTPMethod = (url: string, options?: OptionsWithoutMethod) => Promise<XMLHttpRequest>
 
-class HTTPTransport {
+export default class HTTPTransport {
     get: HTTPMethod = (url, options = {}) => (
         this.request(url, {...options, method: METHODS.GET})
       )
@@ -72,6 +72,7 @@ class HTTPTransport {
             xhr.onabort = reject;
             xhr.onerror = reject;
             xhr.ontimeout = reject;
+            xhr.withCredentials = true;
 
             if (isGet || !data) {
                 xhr.send();
