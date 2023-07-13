@@ -1,4 +1,4 @@
-import * as styles from './internal-server-error.module.scss';
+import styles from './internal-server-error.module.scss';
 import tpl from './tpl.ts';
 import Block from '../../services/Block.ts';
 
