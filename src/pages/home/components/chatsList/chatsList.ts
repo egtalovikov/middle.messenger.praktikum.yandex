@@ -29,9 +29,19 @@ export default class ChatsList extends Block {
   }
 }
 
-Handlebars.registerHelper('deleteFirstAndLast', (str) => str.replace(/^.|.$/g, ''));
+Handlebars.registerHelper('deleteFirstAndLast', (str) => {
+  if (str !== null) {
+    str.replace(/^.|.$/g, '');
+  }
+});
 
 Handlebars.registerHelper(
   'getTime',
-  (time) => `${new Date(time).getHours()}:${new Date(time).getMinutes()}`,
+  // eslint-disable-next-line consistent-return
+  (time) => {
+    if (time !== null) {
+      return `${new Date(time).getHours()}:${new Date(time).getMinutes()}`;
+    }
+    return null;
+  },
 );

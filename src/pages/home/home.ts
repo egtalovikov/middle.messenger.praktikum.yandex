@@ -1,9 +1,9 @@
 import Block from '../../services/Block.ts';
 import tpl from './tpl.ts';
 import styles from './home.module.scss';
-import Chats from '../../modules/chats/chats.ts';
+import Chats from '../../modules/chats/index.ts';
 import Form from '../../components/form/index.ts';
-import ChatsList from './components/chatsList/chatsList.ts';
+import ChatsList from './components/chatsList/index.ts';
 import AddChatPopup from './components/addChatPopup/index.ts';
 
 const popup = new AddChatPopup(styles.popup, styles.popupOpened);
