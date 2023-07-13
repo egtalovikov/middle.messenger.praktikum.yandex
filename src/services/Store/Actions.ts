@@ -28,7 +28,8 @@ const setChats = (chats: any) => {
 
 const setMessages = (chatId: string | number, messages: any) => {
   if (!(messages instanceof Array)) {
-    // @ts-ignore: Unreachable code error
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     const messagesArr = store._state.messages[chatId];
     messagesArr.push(messages);
     store.set(`messages.${chatId}`, messages);

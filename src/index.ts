@@ -23,7 +23,8 @@ export const router = new Router('.app');
 
 UserGetInfo.getInfo();
 GetChats.getChats();
-// @ts-ignore: Unreachable code error
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 Store.getState().chats?.forEach((chat: { id: string | number; }) => {
   router.use(`/messenger/${chat.id}`, Index, 'main', {
     content: new Home(chat),
@@ -32,7 +33,8 @@ Store.getState().chats?.forEach((chat: { id: string | number; }) => {
     .then((token) => {
       // eslint-disable-next-line no-undef
       const socket = new WebSocket(
-        // @ts-ignore: Unreachable code error
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         `wss://ya-praktikum.tech/ws/chats/${Store.getState().user.id}/${chat.id}/${token}`,
       );
       socket.addEventListener('open', () => {
@@ -51,19 +53,23 @@ Store.getState().chats?.forEach((chat: { id: string | number; }) => {
 });
 
 router.use('/settings', Index, 'main', {
-  // @ts-ignore: Unreachable code error
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
   content: new About(),
 })
   .use('/messenger', Index, 'main', {
-    // @ts-ignore: Unreachable code error
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     content: new Home(),
   })
   .use('/change-password', Index, 'main', {
-    // @ts-ignore: Unreachable code error
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     content: new ChangePassword(),
   })
   .use('/edit-profile', Index, 'main', {
-    // @ts-ignore: Unreachable code error
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     content: new EditProfile(),
   })
   .use('/', Index, 'main', {
