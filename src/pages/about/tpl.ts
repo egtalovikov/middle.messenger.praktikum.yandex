@@ -10,7 +10,7 @@ const tpl = `
         <img {{#if (isnull user.avatar)}}src="{{avatar}}"
         {{else}}src={{user.avatar}}{{/if}} class={{styles.avatar}} alt="Аватар" />
     </div>
-    <p class={{styles.name}}>{{user.first_name}}</p>
+    <p class={{styles.name}}>{{first_name}}</p>
     {{{form}}}
     <a href="/edit-profile" class={{styles.link}}>Изменить данные</a>
     <a href="/change-password" class={{styles.link}}>Изменить пароль</a>
