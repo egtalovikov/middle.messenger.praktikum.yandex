@@ -4,7 +4,7 @@
   "description": "Messenger",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview"
   },
