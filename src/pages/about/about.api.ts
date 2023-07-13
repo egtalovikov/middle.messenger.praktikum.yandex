@@ -1,10 +1,11 @@
-import HTTPTransport from '../../services/HTTPTransport';
-import { BaseAPI } from '../../api/base-api';
+import HTTPTransport from '../../services/HTTPTransport.ts';
+import BaseAPI from '../../api/base-api.ts';
 
 const aboutAPIInstance = new HTTPTransport();
 
 export default class AboutAPI extends BaseAPI {
-    public request() {
-        return aboutAPIInstance.post('https://ya-praktikum.tech/api/v2/auth/logout')
-    }
+  // eslint-disable-next-line class-methods-use-this
+  public request() {
+    return aboutAPIInstance.post('https://ya-praktikum.tech/api/v2/auth/logout');
+  }
 }

@@ -1,14 +1,16 @@
-import changePasswordAPI from "../pages/about/modules/change-password/change-password.api";
-import prepareDataToRequest from "../utils/prepareDataToRequest";
+import ChangePasswordAPI from '../pages/about/modules/change-password/change-password.api.ts';
+import prepareDataToRequest from '../utils/prepareDataToRequest.ts';
 
-const changePasswordApi = new changePasswordAPI();
+const changePasswordApi = new ChangePasswordAPI();
 
 export default class UserChangePasswordController {
-    public async changePassword(data: UpdatePasswordFormModel) {
-        try {
-            await changePasswordApi.update(prepareDataToRequest(data));
-        } catch (error) {
-            console.log(error);
-        }
+  // eslint-disable-next-line class-methods-use-this, no-undef
+  public async changePassword(data: UpdatePasswordFormModel) {
+    try {
+      await changePasswordApi.update(prepareDataToRequest(data));
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
     }
-} 
+  }
+}

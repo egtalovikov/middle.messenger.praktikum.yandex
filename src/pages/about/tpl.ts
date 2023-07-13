@@ -7,7 +7,8 @@ const tpl = `
     <div class={{styles.avatar-block}}>
         <button type="button" aria-label="Смена аватара" class={{styles.change-avatar}}>Поменять
             аватар</button>
-        <img {{#if (isnull user.avatar)}}src="{{avatar}}"{{else}}src={{user.avatar}}{{/if}} class={{styles.avatar}} alt="Аватар" />
+        <img {{#if (isnull user.avatar)}}src="{{avatar}}"
+        {{else}}src={{user.avatar}}{{/if}} class={{styles.avatar}} alt="Аватар" />
     </div>
     <p class={{styles.name}}>{{user.first_name}}</p>
     {{{form}}}

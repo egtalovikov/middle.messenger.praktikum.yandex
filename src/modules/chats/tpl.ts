@@ -1,12 +1,14 @@
 const tpl = `
   <div class={{styles.header}}>
     <div class={{styles.user}}>
-      <img {{#if (isnull chat.avatar)}}src="{{chat.avatar}}"{{else}}src="{{avatar}}"{{/if}} class={{styles.avatar}} />
+      <img {{#if (isnull chat.avatar)}}src="{{chat.avatar}}"
+      {{else}}src="{{avatar}}"{{/if}} class={{styles.avatar}} />
       <p class={{styles.name}}>{{chat.title}}</p>
     </div>
     <div class={{styles.menu}}>
       <button type="button" class={{styles.addUserMenuButton}}>Добавить пользователя в чат</button>
-      <button type="button" class={{styles.deleteUserMenuButton}}>Удалить пользователя из чата</button>
+      <button type="button" class={{styles.deleteUserMenuButton}}>
+      Удалить пользователя из чата</button>
     </div>
     <button type="button" class={{styles.openMenuButton}}></button>
   </div>

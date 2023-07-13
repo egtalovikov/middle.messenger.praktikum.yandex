@@ -1,17 +1,18 @@
-import tpl from "./tpl";
-import Block from "../../services/Block";
-import Nav from "../../components/nav";
+import tpl from './tpl.ts';
+import Block from '../../services/Block.ts';
+import Nav from '../../components/nav/index.ts';
 
 const NavElement = new Nav().getContent().outerHTML;
 
 export default class Index extends Block {
-    constructor(tag: string | undefined, props = {}) {
-        super(tag, props);
-    }
-    render() {
+  constructor(tag: string | undefined, props = {}) {
+    super(tag, props);
+  }
 
-        return this.compile(tpl, { ...this._props,
-            nav: NavElement
-        });
-    }
+  render() {
+    return this.compile(tpl, {
+      ...this._props,
+      nav: NavElement,
+    });
+  }
 }

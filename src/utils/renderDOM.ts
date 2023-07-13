@@ -1,13 +1,12 @@
-import Block from "../services/Block";
+import Block from '../services/Block.ts';
 
 export default function render(query: string, component: Block) {
+  // eslint-disable-next-line no-undef
+  const root = document.querySelector(query);
 
-	const root = document.querySelector(query);
+  if (root) { root.appendChild(component.getContent()); }
 
-	if(root)
-		root.appendChild(component.getContent());
+  component.dispatchComponentDidMount();
 
-	component.dispatchComponentDidMount();
-
-	return root;
+  return root;
 }
