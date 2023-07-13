@@ -19,7 +19,7 @@
 * SCSS
 * JavaScript
 * Handlebars
-* Parcel
+* Vite
 * ESLint
 * Stylelint
 * Netlify
@@ -30,6 +30,7 @@
 * Transitions
 * Позиционирование
 * Формы
+* API
 
 ## Инструкция по развёртыванию
 
