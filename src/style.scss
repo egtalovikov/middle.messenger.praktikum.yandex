@@ -1,21 +1,34 @@
+/* stylelint-disable */
 @import url('../static/normalize.scss');
 @import url('../static/fonts/fonts.scss');
 
+
+$black: #000000;
+$white: #ffffff;
+/* stylelint-enable */
+
 body {
-  font-family: 'Inter', arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: Inter, arial, sans-serif;
+  background-color: $white;
+  color: $black;
+  /* stylelint-disable */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  /* stylelint-enable */
 }
 
-#root {
+.content {
   min-width: 320px;
-  max-width: 1280px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

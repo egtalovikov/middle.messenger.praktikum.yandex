@@ -1,2 +1,11 @@
-import { internalServerError } from './internal-server-error.tmpl.ts';
-export default internalServerError;
+import * as styles from './internal-server-error.module.scss';
+import tpl from './tpl.ts';
+import Block from '../../services/Block.ts';
+
+export default class InternalServerError extends Block {
+  render() {
+    return this.compile(tpl, {
+      styles,
+    });
+  }
+}

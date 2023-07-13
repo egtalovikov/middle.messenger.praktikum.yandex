@@ -1,0 +1,216 @@
+$borderColor: #EAEAEA; /* stylelint-disable-line */
+$nameColor: #1E1E1E; /* stylelint-disable-line */
+$sendButtonColor: #3369F3; /* stylelint-disable-line */
+$dateColor: #999; /* stylelint-disable-line */
+$inputColor: #EFEFEF; /* stylelint-disable-line */
+
+.wrapper {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 48px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: $nameColor;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $dateColor;
+  border-radius: 5px;
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: visibility .5s linear, opacity .5s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menuActive { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
+}
+
+.addUserMenuButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.deleteUserMenuButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.openMenuButton { /* stylelint-disable-line */
+  background-image: url("../../../static/chats-more-button.svg");
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.date {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: $dateColor;
+  margin-bottom: 30px;
+}
+
+.messages {
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 11px;
+  border-top: 1px solid $borderColor;
+}
+
+.attachButton { /* stylelint-disable-line */
+  background-color: transparent;
+  background-image: url('../../../static/chats-attach-button.svg');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  border: none;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.input {
+  background: $inputColor;
+  border-radius: 30px;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.sendButton { /* stylelint-disable-line */
+  border: none;
+  background-color: $sendButtonColor;
+  background-image: url('../../../static/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+.error { 
+  display: none;
+  color: red;
+  position: absolute;
+  font-size: 9px;
+  top: -30%;
+  max-width: 200px;
+  left: 0;
+}
+
+.addPopup { /* stylelint-disable-line */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addPopupOpened { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
+}
+
+.deletePopup { /* stylelint-disable-line */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deletePopupOpened { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
+}

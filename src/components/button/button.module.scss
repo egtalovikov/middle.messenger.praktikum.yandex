@@ -1,11 +1,13 @@
+$buttonColor: #3369F3; /* stylelint-disable-line */
+
 .button {
     font-weight: 500;
     font-size: 13px;
     line-height: 13px;
-    background-color: #3369F3;
+    background-color: $buttonColor;
     border-radius: 8px;
     border: none;
-    color: #FFFFFF;
+    color: #FFF;
     width: 280px;
     padding: 12px 0;
     margin-bottom: 14px;

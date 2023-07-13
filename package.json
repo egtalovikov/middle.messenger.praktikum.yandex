@@ -2,21 +2,34 @@
   "name": "middle.messenger.praktikum.yandex",
   "version": "0.0.1",
   "description": "Messenger",
+  "type": "module",
   "scripts": {
-    "start": "parcel --port 3000 src/index.html --open --no-cache --target default --dist-dir ./build",
-    "build": "parcel build src/index.html --no-source-maps --target default --dist-dir ./build",
-    "watch": "parcel watch"
+    "start": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.18.2",
-    "parcel": "^2.8.3"
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-scss": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.3"
   },
   "dependencies": {
-    "@parcel/transformer-sass": "^2.8.3",
+    "express": "^4.18.2",
     "handlebars": "^4.7.7",
-    "parcel-transformer-hbs": "^1.0.4"
+    "precss": "^4.0.0",
+    "sass": "^1.63.6",
+    "uuid": "^9.0.0",
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "engines": {
     "node": ">12.0.0"

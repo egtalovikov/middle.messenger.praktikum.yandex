@@ -1,2 +1,4 @@
-import { editProfile } from './edit-profile.tmpl.ts';
-export default editProfile;
+import { Connect } from '../../../../services/Store/index.ts';
+import EditProfile from './edit-profile.ts';
+
+export default Connect(EditProfile, (state: { user: any; }) => state.user);
