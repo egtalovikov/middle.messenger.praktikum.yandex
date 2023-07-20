@@ -4,7 +4,7 @@
   "description": "Messenger",
   "type": "module",
   "scripts": {
-    "start": "npm run build  && node ./server.js",
+    "start": "npm run build  && node ./server.cjs",
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview"
