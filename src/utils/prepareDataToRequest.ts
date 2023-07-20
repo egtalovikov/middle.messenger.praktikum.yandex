@@ -1,3 +1,3 @@
-export default function prepareDataToRequest(data: any) {
+export default function prepareDataToRequest(data: unknown) {
   return JSON.stringify(data);
 }

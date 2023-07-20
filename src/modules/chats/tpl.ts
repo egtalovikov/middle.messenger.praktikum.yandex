@@ -9,6 +9,8 @@ const tpl = `
       <button type="button" class={{styles.addUserMenuButton}}>Добавить пользователя в чат</button>
       <button type="button" class={{styles.deleteUserMenuButton}}>
       Удалить пользователя из чата</button>
+      <button type="button" class={{styles.deleteChatButton}}>
+      Удалить чат</button>
     </div>
     <button type="button" class={{styles.openMenuButton}}></button>
   </div>

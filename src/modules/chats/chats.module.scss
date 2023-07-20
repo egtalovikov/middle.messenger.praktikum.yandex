@@ -80,6 +80,16 @@ $inputColor: #EFEFEF; /* stylelint-disable-line */
   border: none;
   background-color: transparent;
   font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.deleteChatButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $dateColor;
@@ -163,7 +173,7 @@ $inputColor: #EFEFEF; /* stylelint-disable-line */
   height: 28px;
 }
 
-.error { 
+.error {
   display: none;
   color: red;
   position: absolute;

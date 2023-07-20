@@ -5,6 +5,8 @@ import avatar from '../../../static/profile-avatar.png';
 import Message from './components/message/index.ts';
 import Block from '../../services/Block.ts';
 import ManageUserPopup from './components/manageUserPopup/index.ts';
+import DeleteChatController from '../../controllers/delete-chat.ts';
+import { setPopupText } from '../../services/Store/Actions.ts';
 
 const submitButton = `<button class=${styles.sendButton}></button>`;
 
@@ -18,26 +20,29 @@ export default class Chats extends Block {
       name: 'Вадим',
       avatar,
       chat,
-      addUserPopupComponent: new ManageUserPopup(
-        styles.addPopup,
-        styles.addPopupOpened,
+      addUserPopupComponent: new ManageUserPopup({
+        popupStyle: styles.addPopup,
+        popupOpenedStyle: styles.addPopupOpened,
         chat,
-        'Введите ID (добавление)',
-        'Добавить',
-      ),
-      deleteUserPopupComponent: new ManageUserPopup(
-        styles.deletePopup,
-        styles.deletePopupOpened,
+        title: 'Введите ID (добавление)',
+        buttonText: 'Добавить',
+      }),
+      deleteUserPopupComponent: new ManageUserPopup({
+        popupStyle: styles.deletePopup,
+        popupOpenedStyle: styles.deletePopupOpened,
         chat,
-        'Введите ID (удаление)',
-        'Удалить',
-      ),
+        title: 'Введите ID (удаление)',
+        buttonText: 'Удалить',
+      }),
       date: '19 июня',
       submitButton,
       events: {
         // eslint-disable-next-line no-undef
         click: (e: { stopPropagation: () => void; target: Element | null; }) => {
           e.stopPropagation();
+          if (e.target === this._element.querySelector(`.${styles.deleteChatButton}`)) {
+            new DeleteChatController().deleteChat(chat.id);
+          }
           if (e.target === this._element.querySelector(`.${styles.openMenuButton}`)) {
             this._element.querySelector(`.${styles.menu}`)?.classList.add(styles.menuActive);
           }
@@ -46,10 +51,12 @@ export default class Chats extends Block {
             this._element.querySelector(`.${styles.menu}`)?.classList.remove(styles.menuActive);
           }
           if (e.target === this._element.querySelector(`.${styles.addUserMenuButton}`)) {
+            setPopupText('');
             this._element.querySelector(`.${styles.addPopup}`)
               ?.classList.add(styles.addPopupOpened);
           }
           if (e.target === this._element.querySelector(`.${styles.deleteUserMenuButton}`)) {
+            setPopupText('');
             this._element.querySelector(`.${styles.deletePopup}`)
               ?.classList.add(styles.deletePopupOpened);
           }
@@ -164,7 +171,8 @@ export default class Chats extends Block {
 
   render() {
     const messages = this._props.messages
-     && this._props.chat !== undefined ? this._props.messages[this._props.chat.id].map(({
+     && this._props.chat !== undefined && this._props.messages[this._props.chat.id]
+      ? this._props.messages[this._props.chat.id].map(({
         // eslint-disable-next-line camelcase
         content, user_id, time, is_read,
       } : any) => new Message(
@@ -176,8 +184,8 @@ export default class Chats extends Block {
           // eslint-disable-next-line camelcase
           isRead: is_read,
         },
-      )).map((x: { getContent: () => { (): any;
-         new(): any; outerHTML: any; }; }) => x.getContent().outerHTML) : [];
+      )).map((x: { getContent: () => { (): unknown;
+         new(): unknown; outerHTML: unknown; }; }) => x.getContent().outerHTML) : [];
     return this.compile(tpl, {
       ...this._props,
       form: this._children.form,

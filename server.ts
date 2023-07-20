@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.use(express.static('./build'));
 
-app.get('/*', (res: { sendFile: (arg0: any) => void; }) => {
+app.get('/*', (res: { sendFile: (arg0: unknown) => void; }) => {
   res.sendFile(path.join(__dirname, './build/index.html'));
 });
 

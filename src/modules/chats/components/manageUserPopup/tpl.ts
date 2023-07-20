@@ -4,6 +4,7 @@ const tpl = `
   <h2 class={{styles.title}}>{{title}}</h2>
   <form>
   <input class={{styles.input}} name="chatId">
+  <p class={{styles.status}}>{{popupText}}</p>
   <button class={{styles.button}}>{{buttonText}}</button>
   </form>
 </div>

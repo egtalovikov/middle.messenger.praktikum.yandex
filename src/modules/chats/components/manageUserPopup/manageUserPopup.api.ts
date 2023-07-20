@@ -1,12 +1,13 @@
 /* eslint-disable class-methods-use-this */
 import HTTPTransport from '../../../../services/HTTPTransport.ts';
 import BaseAPI from '../../../../api/base-api.ts';
+import { BASE_URL } from '../../../../index.ts';
 
-const addUserPopupAPIInstance = new HTTPTransport();
+const manageUserPopupAPIInstance = new HTTPTransport();
 
-export default class AddUserPopupAPI extends BaseAPI {
+export default class ManageUserPopupAPI extends BaseAPI {
   public update(data: string) {
-    return addUserPopupAPIInstance.put('https://ya-praktikum.tech/api/v2/chats/users', {
+    return manageUserPopupAPIInstance.put(`${BASE_URL}/chats/users`, {
       headers: {
         'Content-type': 'application/json',
       },
@@ -15,7 +16,7 @@ export default class AddUserPopupAPI extends BaseAPI {
   }
 
   public delete(data: string) {
-    return addUserPopupAPIInstance.delete('https://ya-praktikum.tech/api/v2/chats/users', {
+    return manageUserPopupAPIInstance.delete(`${BASE_URL}/chats/users`, {
       headers: {
         'Content-type': 'application/json',
       },

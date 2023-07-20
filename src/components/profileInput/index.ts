@@ -89,6 +89,6 @@ export default class profileInput extends Block {
 }
 
 // eslint-disable-next-line func-names
-Handlebars.registerHelper('ifEquals', function (this: any, arg1, arg2, options) {
+Handlebars.registerHelper('ifEquals', function (this: unknown, arg1, arg2, options) {
   return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
 });

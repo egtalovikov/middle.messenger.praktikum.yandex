@@ -16,7 +16,7 @@ import CreateChatController from '../../controllers/create-chat.ts';
 interface Props {
     formClassName: string,
     submitButton?: Button | string,
-    inputs: any,
+    inputs: unknown,
     enctype?: string,
     convertInputs?: Boolean,
     disabled?: Boolean,
@@ -34,7 +34,7 @@ export default class Form extends Block {
       },
       inputs: props.convertInputs ? new (connect(
         profileInput,
-        (state: { user: any; }) => ({ user: state.user }),
+        (state: { user: unknown; }) => ({ user: state.user }),
       ))({ inputs: props.inputs, disabled: props.disabled }) : props.inputs,
       submitButton: props.submitButton,
       disableSubmit: props.disableSubmit ? props.disableSubmit : false,
@@ -150,7 +150,7 @@ export default class Form extends Block {
                   .changePassword({ oldPassword: data.oldPassword, newPassword: data.newPassword });
               }
             }
-            if (location.pathname === '/messenger') {
+            if (location.pathname.indexOf('/messenger') > -1) {
               new CreateChatController().createChat(data);
             }
           }

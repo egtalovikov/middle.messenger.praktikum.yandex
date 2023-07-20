@@ -6,10 +6,8 @@ import Form from '../../components/form/index.ts';
 import ChatsList from './components/chatsList/index.ts';
 import AddChatPopup from './components/addChatPopup/index.ts';
 
-const popup = new AddChatPopup(styles.popup, styles.popupOpened);
-
 export default class Home extends Block {
-  constructor(chat: any) {
+  constructor(chat: unknown) {
     super('section', {
       Chats: new Chats(chat),
       styles,
@@ -22,11 +20,10 @@ export default class Home extends Block {
       }),
       chat: chat || undefined,
       chatsList: new ChatsList(chat),
-      popup,
+      popup: new AddChatPopup(styles.popup, styles.popupOpened),
       events: {
         // eslint-disable-next-line no-undef
         click: (e: { stopPropagation: () => void; target: Element | null; }) => {
-          e.stopPropagation();
           if (e.target === this._element.querySelector(`.${styles.addButton}`)) {
             this._element.querySelector(`.${styles.popup}`)?.classList.add(styles.popupOpened);
           }
