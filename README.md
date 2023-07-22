@@ -1,6 +1,8 @@
 # [Веб-приложение "Чат"](https://lovely-hummingbird-46dbe8.netlify.app)
 
 [Pull Request (1 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/2)
+[Pull Request (2 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/3)
+[Pull Request (3 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/4)
 
 <p align="center">
     <img alt="Version 0.1.0" src="https://img.shields.io/badge/version-0.1.0-blue" />
@@ -19,7 +21,7 @@
 * SCSS
 * JavaScript
 * Handlebars
-* Parcel
+* Vite
 * ESLint
 * Stylelint
 * Netlify
@@ -30,6 +32,7 @@
 * Transitions
 * Позиционирование
 * Формы
+* API
 
 ## Инструкция по развёртыванию
 

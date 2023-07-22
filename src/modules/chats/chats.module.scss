@@ -1,8 +1,8 @@
-$borderColor: #EAEAEA;
-$nameColor: #1E1E1E;
-$sendButtonColor: #3369F3;
-$dateColor: #999999;
-$inputColor: #EFEFEF;
+$borderColor: #EAEAEA; /* stylelint-disable-line */
+$nameColor: #1E1E1E; /* stylelint-disable-line */
+$sendButtonColor: #3369F3; /* stylelint-disable-line */
+$dateColor: #999; /* stylelint-disable-line */
+$inputColor: #EFEFEF; /* stylelint-disable-line */
 
 .wrapper {
   width: 100%;
@@ -34,6 +34,7 @@ $inputColor: #EFEFEF;
   width: 34px;
   height: 34px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .name {
@@ -45,6 +46,57 @@ $inputColor: #EFEFEF;
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $dateColor;
+  border-radius: 5px;
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: visibility .5s linear, opacity .5s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menuActive { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
+}
+
+.addUserMenuButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.deleteUserMenuButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.deleteChatButton { /* stylelint-disable-line */
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $dateColor;
+  cursor: pointer;
+}
+
+.openMenuButton { /* stylelint-disable-line */
   background-image: url("../../../static/chats-more-button.svg");
   background-color: transparent;
   border: none;
@@ -52,6 +104,7 @@ $inputColor: #EFEFEF;
   width: 15px;
   height: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .date {
@@ -80,7 +133,7 @@ $inputColor: #EFEFEF;
   border-top: 1px solid $borderColor;
 }
 
-.attachButton {
+.attachButton { /* stylelint-disable-line */
   background-color: transparent;
   background-image: url('../../../static/chats-attach-button.svg');
   background-repeat: no-repeat;
@@ -108,7 +161,7 @@ $inputColor: #EFEFEF;
   margin-right: 10px;
 }
 
-.sendButton {
+.sendButton { /* stylelint-disable-line */
   border: none;
   background-color: $sendButtonColor;
   background-image: url('../../../static/arrow.svg');
@@ -120,7 +173,7 @@ $inputColor: #EFEFEF;
   height: 28px;
 }
 
-.error { 
+.error {
   display: none;
   color: red;
   position: absolute;
@@ -128,4 +181,46 @@ $inputColor: #EFEFEF;
   top: -30%;
   max-width: 200px;
   left: 0;
+}
+
+.addPopup { /* stylelint-disable-line */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addPopupOpened { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
+}
+
+.deletePopup { /* stylelint-disable-line */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s linear, opacity .5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deletePopupOpened { /* stylelint-disable-line */
+  visibility: visible;
+  opacity: 1;
 }

@@ -1,0 +1,45 @@
+$inputBorderColor: #999; /* stylelint-disable-line */
+
+.container {
+    background-color: #FFF;
+    color: #000;
+    max-width: 430px;
+    padding: 36px 34px;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0 0 0 / 15%);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 54px;
+}
+
+.closeButton { /* stylelint-disable-line */
+    border: none;
+    background: url("../../../../../static/popup-close.svg") center/100% no-repeat;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: -40px;
+    right: -40px;
+}
+
+.input {
+    margin: 0 0 40px;
+    border: none;
+    border-bottom: 1px solid $inputBorderColor;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
