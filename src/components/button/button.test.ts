@@ -10,7 +10,7 @@ describe('Button component', () => {
     const callback = sinon.stub();
     const button = new Button('123', { click: callback });
 
-    // @ts-ignore
+    // @ts-expect-error: Bans protected property
     // eslint-disable-next-line no-undef
     const element = button._element as HTMLElement;
 

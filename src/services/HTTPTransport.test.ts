@@ -11,7 +11,7 @@ describe('HTTPTransport test', () => {
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
 
-    // @ts-expect-error
+    // @ts-expect-error: Sinon misses types
     global.XMLHttpRequest = xhr;
 
     xhr.onCreate = (req) => {
@@ -24,7 +24,7 @@ describe('HTTPTransport test', () => {
   // eslint-disable-next-line no-undef
   afterEach(() => {
     requests.length = 0;
-    // @ts-expect-error
+    // @ts-expect-error: Miss restore
     global.XMLHttpRequest.restore();
   });
 
