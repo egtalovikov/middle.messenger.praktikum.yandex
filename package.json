@@ -7,7 +7,7 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "mocha --require ts-node/register --require ./mochaSetup.cjs './src/**/*.test.ts'",
+    "test": "TS_NODE_FILES=true mocha --require ts-node/register --require ./mochaSetup.cjs './src/**/*.test.ts'",
     "lint:css": "node_modules/.bin/stylelint **/*.scss",
     "lint:js": "node_modules/.bin/eslint .",
     "lint:all": "npm-run-all --parallel lint:*"
