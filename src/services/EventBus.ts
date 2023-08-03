@@ -1,4 +1,4 @@
-type Callable = (...args: any[]) => void;
+type Callable = (...args: unknown[]) => void;
 
 interface Listener {
     [key: string]: Callable[];
@@ -29,7 +29,7 @@ export default class EventBus {
     );
   }
 
-  emit(event: string, ...args: any[]) {
+  emit(event: string, ...args: unknown[]) {
     if (!this.listeners[event]) {
       throw new Error(`Нет события: ${event}`);
     }

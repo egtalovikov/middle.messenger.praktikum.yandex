@@ -1,3 +1,4 @@
+import { BASE_URL } from '../../index.ts';
 import Store from './Store.ts';
 
 const store = new Store();
@@ -5,12 +6,12 @@ const store = new Store();
 const setUser = (user: any) => {
   store.set('user', {
     ...user,
-    avatar: `https://ya-praktikum.tech/api/v2/resources${user.avatar}`,
+    avatar: `${BASE_URL}/resources${user.avatar}`,
   });
 };
 
-const setAvatar = (avatar: any) => {
-  store.set('user.avatar', `https://ya-praktikum.tech/api/v2/resources${avatar}`);
+const setAvatar = (avatar: unknown) => {
+  store.set('user.avatar', `${BASE_URL}/resources${avatar}`);
 };
 
 const setChats = (chats: any) => {
@@ -19,14 +20,14 @@ const setChats = (chats: any) => {
     chats.map((x: any) => {
       if (x.avatar !== null) {
         // eslint-disable-next-line no-param-reassign
-        x.avatar = `https://ya-praktikum.tech/api/v2/resources${x.avatar}`;
+        x.avatar = `${BASE_URL}/resources${x.avatar}`;
       }
     });
     store.set('chats', chats);
   }
 };
 
-const setMessages = (chatId: string | number, messages: any) => {
+const setMessages = (chatId: string | number, messages: unknown) => {
   if (!(messages instanceof Array)) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -39,10 +40,14 @@ const setMessages = (chatId: string | number, messages: any) => {
   }
 };
 
-const setSocket = (chatId: any, socket: unknown) => {
+const setSocket = (chatId: unknown, socket: unknown) => {
   store.set(`sockets.${chatId}`, socket);
 };
 
+const setPopupText = (status: string) => {
+  store.set('popupText', status);
+};
+
 export {
-  setUser, setAvatar, setChats, setMessages, setSocket,
+  setUser, setAvatar, setChats, setMessages, setSocket, setPopupText,
 };

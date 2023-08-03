@@ -15,7 +15,7 @@ const form = new Form({
 });
 
 export default class changeAvatarPopup extends Block {
-  constructor(popupStyle: any, popupOpenedStyle: string) {
+  constructor(popupStyle: unknown, popupOpenedStyle: string) {
     super('div', {
       styles,
       attr: {
@@ -23,7 +23,7 @@ export default class changeAvatarPopup extends Block {
       },
       form,
       events: {
-        click: (e: { target: { classList: { contains: (arg0: any) => any; }; }; }) => {
+        click: (e: { target: { classList: { contains: (arg0: unknown) => unknown; }; }; }) => {
           if (e.target.classList.contains(popupStyle)
           || e.target.classList.contains(styles.closeButton)) {
             // eslint-disable-next-line no-undef

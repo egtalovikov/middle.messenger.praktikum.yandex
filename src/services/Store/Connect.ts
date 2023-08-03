@@ -2,7 +2,7 @@ import Store, { StoreEvents } from './Store.ts';
 
 export default function connect(Component : any, mapStateToProps : any) {
   return class extends Component {
-    constructor(tag: any, props = {}) {
+    constructor(tag: unknown, props = {}) {
       const store = new Store();
 
       super(tag, { ...props, ...mapStateToProps(store.getState()) });

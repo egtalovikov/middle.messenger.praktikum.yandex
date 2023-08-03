@@ -14,7 +14,7 @@ export default class Store extends EventBus {
 
   _state = { };
 
-  static set: any;
+  static set: unknown;
 
   constructor() {
     // eslint-disable-next-line no-constructor-return

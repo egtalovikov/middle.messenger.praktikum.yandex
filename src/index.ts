@@ -14,6 +14,8 @@ import GetChatsController from './controllers/get-chats.ts';
 import GetChatTokenController from './controllers/get-chat-token.ts';
 import { setMessages, setSocket } from './services/Store/Actions.ts';
 
+export const BASE_URL = 'https://ya-praktikum.tech/api/v2';
+
 const UserGetInfo = new UserGetInfoController();
 
 const GetChats = new GetChatsController();
