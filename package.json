@@ -10,7 +10,8 @@
     "test": "TS_NODE_FILES=true mocha --require ts-node/register --require ./mochaSetup.cjs './src/**/*.test.ts'",
     "lint:css": "node_modules/.bin/stylelint **/*.scss",
     "lint:js": "node_modules/.bin/eslint .",
-    "lint:all": "npm-run-all --parallel lint:*"
+    "lint": "npm-run-all --parallel lint:*",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +29,7 @@
     "husky": "8.0.3",
     "jsdom": "22.1.0",
     "mocha": "10.2.0",
+    "npm-run-all": "^4.1.5",
     "sinon": "15.2.0",
     "stylelint": "15.10.1",
     "stylelint-config-standard-scss": "10.0.0",
@@ -39,7 +41,6 @@
   "dependencies": {
     "express": "4.18.2",
     "handlebars": "4.7.7",
-    "npm-run-all": "4.1.5",
     "precss": "4.0.0",
     "sass": "1.63.6",
     "uuid": "9.0.0",
@@ -49,10 +50,5 @@
   "engines": {
     "node": ">12.0.0"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm-run-all test lint:all"
-    }
-  }
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
