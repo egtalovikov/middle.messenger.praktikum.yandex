@@ -3,7 +3,7 @@ import tpl from './tpl.ts';
 import Block from '../../services/Block.ts';
 
 export default class Button extends Block {
-  constructor(text: string) {
+  constructor(text: string, events?: {}) {
     super('button', {
       styles,
       text,
@@ -12,6 +12,7 @@ export default class Button extends Block {
         'aria-label': text,
         id: 'submitButton',
       },
+      events,
     });
   }
 
