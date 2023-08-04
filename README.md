@@ -3,6 +3,7 @@
 [Pull Request (1 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/2)
 [Pull Request (2 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/3)
 [Pull Request (3 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/4)
+[Pull Request (4 спринт)](https://github.com/egtalovikov/middle.messenger.praktikum.yandex/pull/5)
 
 <p align="center">
     <img alt="Version 0.1.0" src="https://img.shields.io/badge/version-0.1.0-blue" />
@@ -12,7 +13,7 @@
 
 ## Описание
 
-На данный момент проект на стадии разработки. Внедрён TypeScript.
+На данный момент проект на стадии разработки. Внедрён TypeScript. Покрывается тестами.
 
 ## Стек
 
@@ -21,6 +22,11 @@
 * SCSS
 * JavaScript
 * Handlebars
+* Mocha
+* Chai
+* Sinon
+* JSDom
+* Husky
 * Vite
 * ESLint
 * Stylelint
@@ -41,5 +47,6 @@
 </p>
 
 - `npm install` — установка стабильной версии,
-- `npm start` — запуск версии для разработчика,
+- `npm run dev` — запуск версии для разработчика,
 - `npm run build` — сборка стабильной версии.
+- `npm run test` — запуск тестов.

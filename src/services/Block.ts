@@ -80,6 +80,7 @@ export default class Block {
     this.addAttribute();
   }
 
+  // eslint-disable-next-line class-methods-use-this
   protected render() {
     // eslint-disable-next-line no-undef
     return new DocumentFragment();
@@ -149,6 +150,7 @@ export default class Block {
     Object.values(this._children).forEach((child) => { child.dispatchComponentDidMount(); });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   protected componentDidMount() {}
 
   dispatchComponentDidMount() {
@@ -161,6 +163,7 @@ export default class Block {
     if (isReRender) { this._eventBus.emit(Block.EVENT_FLOW_RENDER); }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   componentDidUpdate() {
     return true;
   }
